@@ -13,11 +13,17 @@ Features
 - Password confirmation with validation
 - Gradient Background
 
-[View Live Demo](https://jan030100.github.io/registration-form)
-
  Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/registration-form.git
-   cd registration-form
+1. Clone the repository
+git clone https://github.com/your-username/registration-form.git
+cd registration-form
+   
+2. Install dependencies
+npm install
+
+3. Start development server
+npm run dev
+
+4. Open your browser
+Navigate to http://localhost:5173 (or the port shown in terminal)
