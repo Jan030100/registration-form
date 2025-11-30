@@ -13,11 +13,9 @@ Features
 - Password confirmation with validation
 - Gradient Background
 
-Live Demo
+[View Live Demo](https://jan030100.github.io/registration-form)
 
-[View Live Demo](https://Jan030100.github.io/registration-form)
-
-## 🛠️ Installation
+ Installation
 
 1. **Clone the repository**
    ```bash
