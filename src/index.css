@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Inter', sans-serif;
   background: linear-gradient(135deg, #53d0e6, #59a6f5);
@@ -22,47 +23,57 @@ body {
   max-width: 1300px;
   margin: 0 auto;
 }
+
 .left-img {
   flex: 0 0 480px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .left-img img {
   width: 480px;
-  height: auto;
+  height: 480px; 
+  border-radius: 50%;
+  object-fit: cover; 
   animation: float 4s ease-in-out infinite;
-  filter: drop-shadow(0 12px 25px rgba(0,0,0,0.2));
+  filter: drop-shadow(0 15px 30px rgba(0,0,0,0.25));
+  border: 8px solid rgba(255, 255, 255, 0.3); 
+  background: transparent;
 }
 .container {
   flex: 0 0 450px;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.15);
   padding: 50px 40px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3); 
   height: fit-content;
 }
+
 
 .form {
   width: 100%;
 }
+
 
 h2 {
   text-align: center;
   margin-bottom: 12px;
   font-size: 28px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: white; 
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .subtitle {
   text-align: center;
   margin-bottom: 30px;
   font-size: 14px;
-  color: #666;
+  color: rgba(255, 255, 255, 0.9); 
   line-height: 1.5;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .label {
@@ -70,10 +81,10 @@ h2 {
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: 600;
-  color: #333;
+  color: white; 
   text-align: left;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
-
 .field {
   margin-bottom: 22px;
 }
@@ -81,34 +92,37 @@ h2 {
 input {
   width: 100%;
   padding: 14px 16px;
-  border: 1.5px solid #e1e5e9;
-  border-radius: 10px;
-  background: #f8f9fa;
-  transition: all 0.2s ease;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2); 
+  transition: all 0.3s ease;
   font-size: 15px;
-  color: #333;
-}
-
-input:focus {
-  border-color: #59a6f5;
-  box-shadow: 0 0 0 3px rgba(89, 166, 245, 0.15);
-  background: white;
-  outline: none;
+  color: white; 
+  backdrop-filter: blur(10px);
 }
 
 input::placeholder {
-  color: #999;
+  color: rgba(255, 255, 255, 0.7);
 }
+
+input:focus {
+  border-color: rgba(255, 255, 255, 0.8); 
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25); 
+  outline: none;
+}
+
 
 .error {
   min-height: 18px;
   font-size: 12px;
   margin-top: 6px;
   padding-left: 4px;
+  color: #ff6b6b; 
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 .error.visible {
-  color: #e63946;
   visibility: visible;
 }
 
@@ -120,21 +134,23 @@ input::placeholder {
 button {
   width: 100%;
   padding: 14px;
-  background: linear-gradient(135deg, #53d0e6, #59a6f5);
-  border: none;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.25); 
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
   color: white;
   font-size: 16px;
   cursor: pointer;
   font-weight: 600;
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
   margin-top: 10px;
+  backdrop-filter: blur(10px);
 }
 
 button:hover {
-  opacity: 0.9;
-  transform: translateY(-1px);
-  box-shadow: 0 5px 15px rgba(89, 166, 245, 0.3);
+  background: rgba(255, 255, 255, 0.35); 
+  border-color: rgba(255, 255, 255, 0.7);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
 }
 
 @keyframes fadeIn {
@@ -150,10 +166,10 @@ button:hover {
 
 @keyframes float {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translateY(0px) rotate(0deg);
   }
   50% {
-    transform: translateY(-8px);
+    transform: translateY(-12px) rotate(1deg);
   }
 }
 
@@ -168,6 +184,7 @@ button:hover {
   
   .left-img img {
     width: 400px;
+    height: 400px;
   }
 }
 
@@ -185,8 +202,9 @@ button:hover {
   }
   
   .left-img img {
-    width: 100%;
-    max-width: 450px;
+    width: 350px;
+    height: 350px;
+    max-width: 350px;
   }
   
   .container {
@@ -207,7 +225,9 @@ button:hover {
   }
   
   .left-img img {
-    max-width: 380px;
+    width: 300px;
+    height: 300px;
+    max-width: 300px;
   }
   
   h2 {
@@ -221,7 +241,9 @@ button:hover {
   }
   
   .left-img img {
-    max-width: 320px;
+    width: 250px;
+    height: 250px;
+    max-width: 250px;
   }
   
   .container {
